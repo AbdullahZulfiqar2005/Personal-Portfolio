@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -33,13 +33,13 @@ nav ul li a {
 }
 
 a {
-    color: #00ccff; /* Change to your desired color */
+    color: #00ccff; 
     text-decoration: none;
 }
 
 a:hover {
-    color: #ff6600; /* Change to your desired hover color */
-    text-decoration: underline; /* Optional: Add underline on hover */
+    color: #ff6600; 
+    text-decoration: underline; 
 }
 
 section {
@@ -54,7 +54,7 @@ section {
 
 .about-container {
     display: flex;
-    align-items: flex-start; /* Adjust as needed */
+    align-items: flex-start; 
     justify-content: space-between;
     flex-wrap: wrap;
     max-width: 1200px;
@@ -64,8 +64,8 @@ section {
 .about-description {
     flex: 1;
     margin-right: 2rem;
-    font-size: 18px; /* Adjust font size as needed */
-    text-align: left; /* Adjust text alignment */
+    font-size: 18px; 
+    text-align: left; 
 }
 
 .profile-container {
@@ -97,7 +97,7 @@ form {
     flex-direction: column;
     align-items: center;
     margin-top: 2rem;
-    max-width: 600px; /* Adjust form width as needed */
+    max-width: 600px; 
     margin: 0 auto;
 }
 
@@ -146,11 +146,70 @@ form button {
 }
 
 .contact-details a {
-    color: #00ccff; /* Change to your desired color */
+    color: #00ccff; 
     text-decoration: none;
 }
 
 .contact-details a:hover {
-    color: #ff6600; /* Change to your desired hover color */
+    color: #ff6600; 
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    body{
+        font-size: x-small;
+        
+    }
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-description {
+        margin-right: 0;
+        margin-bottom: 2rem;
+        text-align: center;
+        font-size: x-small;
+    }
+
+    .profile-container {
+        margin-left: 0;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav ul li {
+        margin: 2px;
+    }
+
+    section {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    form {
+        padding: 1rem;
+    }
+
+    form label {
+        width: 100%;
+    }
+
+    form input, form textarea {
+        width: 100%;
+    }
+
+    form button {
+        width: 100%;
+    }
 }
