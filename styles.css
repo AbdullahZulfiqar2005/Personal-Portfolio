@@ -1,0 +1,156 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('bg.avif') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+a {
+    color: #00ccff; /* Change to your desired color */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff6600; /* Change to your desired hover color */
+    text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+section {
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.about-container {
+    display: flex;
+    align-items: flex-start; /* Adjust as needed */
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-description {
+    flex: 1;
+    margin-right: 2rem;
+    font-size: 18px; /* Adjust font size as needed */
+    text-align: left; /* Adjust text alignment */
+}
+
+.profile-container {
+    flex: 0 0 auto;
+    margin-left: 2rem;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card {
+    border: 1px solid white;
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    max-width: 600px; /* Adjust form width as needed */
+    margin: 0 auto;
+}
+
+form label {
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+form button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#contact {
+    padding: 2rem;
+    text-align: center;
+    margin: 2rem;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+
+#contact h1 {
+    margin-bottom: 1rem;
+}
+
+.contact-details p {
+    margin: 0.5rem 0;
+}
+
+.contact-details a {
+    color: #00ccff; /* Change to your desired color */
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    color: #ff6600; /* Change to your desired hover color */
+    text-decoration: underline;
+}
