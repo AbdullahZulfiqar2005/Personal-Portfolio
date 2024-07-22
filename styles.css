@@ -38,7 +38,7 @@ a {
 }
 
 a:hover {
-    color: #ff6600; 
+    color: #ff6600;
     text-decoration: underline; 
 }
 
@@ -65,7 +65,7 @@ section {
     flex: 1;
     margin-right: 2rem;
     font-size: 18px; 
-    text-align: left; 
+    text-align: left;
 }
 
 .profile-container {
@@ -90,6 +90,52 @@ section {
     background-color: rgba(0, 0, 0, 0.6);
     color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    height: 110px; 
+    overflow: hidden; 
+    transition: height 0.5s ease-out; 
+}
+
+.project-card.expanded {
+    height: auto; 
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.toggle-button[aria-expanded="true"] {
+    transform: rotate(180deg);
+}
+
+.project-details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out, opacity 0.5s ease-out, visibility 0.5s ease-out;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0;
+    margin-top: 1rem;
+    opacity: 0; 
+    visibility: hidden; 
+}
+
+.project-card.expanded .project-details {
+    max-height: 500px; 
+    padding: 0.5rem 1rem; 
+    opacity: 1; 
+    visibility: visible; 
 }
 
 form {
@@ -156,10 +202,10 @@ form button {
 }
 
 @media (max-width: 768px) {
-    body{
+    body {
         font-size: x-small;
-        
     }
+
     .about-container {
         flex-direction: column;
         align-items: center;
@@ -180,8 +226,15 @@ form button {
         width: 150px;
         height: 150px;
     }
-}
 
+    .project-card {
+        height: auto;
+    }
+
+    .project-details {
+        max-height: 0; 
+    }
+}
 
 @media (max-width: 480px) {
     nav ul {
@@ -205,7 +258,8 @@ form button {
         width: 100%;
     }
 
-    form input, form textarea {
+    form input,
+    form textarea {
         width: 100%;
     }
 

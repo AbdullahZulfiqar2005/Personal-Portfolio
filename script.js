@@ -1,26 +1,18 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
-
         const target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({
-            behavior: 'smooth'
-        });
+        target.scrollIntoView({ behavior: 'smooth' });
     });
 });
 
-// Initialize EmailJS with your Public Key (User ID)
-(function() {
-    emailjs.init("Es56Ub5rt_SHGf6yS"); // Replace with your actual Public Key
-})();
 
-// Form submission handler
 document.getElementById("contact-form").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    const serviceID = "service_dnvn4tg"; // Replace with your actual Service ID
-    const templateID = "template_cci5ve8"; // Replace with your actual Template ID
-
+    const serviceID = "service_hhjsa2c";
+    const templateID = "template_cci5ve8"; 
     const formData = new FormData(this);
     const templateParams = {
         from_name: formData.get("name"),
@@ -38,4 +30,30 @@ document.getElementById("contact-form").addEventListener("submit", function(even
             console.error("Failed to send message. Error details:", error);
             alert("Failed to send message. Please try again.");
         });
+});
+document.querySelectorAll('.toggle-button').forEach(button => {
+    button.addEventListener('click', function () {
+        const projectDetails = this.parentNode.nextElementSibling;
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+       
+      
+        this.setAttribute('aria-expanded', !isExpanded);
+        
+        
+        if (isExpanded) {
+            projectDetails.style.maxHeight = null;
+        } else {
+            projectDetails.style.maxHeight = projectDetails.scrollHeight + "px";
+        }
+    });
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const projectHeaders = document.querySelectorAll('.project-header');
+
+    projectHeaders.forEach(header => {
+        header.addEventListener('click', function () {
+            const card = this.closest('.project-card');
+            card.classList.toggle('expanded');
+        });
+    });
 });
